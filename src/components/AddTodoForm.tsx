@@ -1,7 +1,12 @@
+import { useState } from 'react'
+
 export default function AddTodoForm() {
+  const [input, setInput] = useState('')
   return (
     <form className="flex">
       <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
         placeholder="Type a new task!"
         className="rounded-s-md grow border border-gray-400 p-2 "
       />
